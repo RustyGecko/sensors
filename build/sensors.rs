@@ -32,7 +32,9 @@ fn compile_library() {
 
         .include("efm32-common/CMSIS/Include")
         .include("efm32-common/Device/EFM32GG/Include")
+        .include("efm32-common/emlib/inc")
 
+        .include("src")
         .file("efm32-common/kits/common/drivers/si7013.c")
 
         .compile("libsensors.a");

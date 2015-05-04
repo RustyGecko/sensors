@@ -9,6 +9,8 @@ repository = "https://github.com/RustyGecko/sensors"
 
 keywords = ["sensors", "bindings"]
 
+build = "build/sensors.rs"
+
 [build-dependencies]
 submodules = "0.1"
 
