@@ -1,0 +1,42 @@
+[package]
+
+name = "sensors"
+version = "0.1.0"
+authors = ["Håvard Wormdal Høiby <havardwhoiby@gmail.com>"]
+
+description = "Bindings for sensors provided with emlib"
+repository = "https://github.com/RustyGecko/sensors"
+
+keywords = ["sensors", "bindings"]
+
+[build-dependencies]
+submodules = "0.1"
+
+[build-dependencies.gcc]
+git = "https://github.com/sondrele/gcc-rs.git"
+
+[features]
+stk3700 = [
+  "emlib/stk3700",
+  "emdrv/stk3700",
+]
+dk3750 = [
+  "emlib/dk3750",
+  "emdrv/dk3750",
+]
+
+
+[target.thumbv7m-none-eabi.dependencies.core]
+git = "https://github.com/RustyGecko/rust-core.git"
+
+[target.thumbv7m-none-eabi.dependencies.emlib]
+git = "https://github.com/RustyGecko/emlib.git"
+
+[target.thumbv7m-none-eabi.dependencies.emdrv]
+git = "https://github.com/RustyGecko/emdrv.git"
+
+[target.thumbv7m-none-eabi.dependencies.libc]
+git = "https://github.com/RustyGecko/rust-libc.git"
+
+[target.thumbv7m-none-eabi.dependencies.collections]
+git = "https://github.com/RustyGecko/rust-collections.git"
